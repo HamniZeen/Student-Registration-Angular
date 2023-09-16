@@ -1,0 +1,42 @@
+.student-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+table{
+    border-collapse: inherit;
+    }
+    .thead-light{
+    background-color: rgb(231,231,231);
+    font-weight:400;
+    }
+    .thead-light th{
+    font-weight: 500;
+    }
+    table tbody tr td{
+    cursor: pointer;
+    }
+    tr:hover{
+    background-color: #c8daf8;
+    }
+
+    .icon{
+        color :rgb(27, 26, 26);
+        margin: 5px;
+    }
+    table tbody tr.active td{
+        background-color: rgb(11, 233, 111);
+    }
+    h3{
+        font-size: 30px;
+        color: black;
+    }
+    .btn-outline-primary :hover{
+background-color: aquamarine !important;
+border-color: blueviolet !important;
+
+    }

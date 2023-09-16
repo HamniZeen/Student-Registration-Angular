@@ -1,0 +1,53 @@
+<div class="container-fluid main-content">
+    <div class="row">
+        <section [ngClass]="showAddStudent? 'col-md-7':'col-md-12'">
+            <div class="student-header">
+                <h3>Student Details</h3>
+                <button type = "button" *ngIf="!showAddStudent" class="btn btn-outline-primary"  (click)="showAddStudents()">Add Student</button>
+                <button type = "button" *ngIf="showAddStudent" class="btn btn-outline-primary" (click)="hideAddStudents()">Hide Student</button>
+          
+            </div>
+            <table class="table">
+                <thead class="thead-light t-head">
+                    <tr>
+                        <th scope="col">Series No</th>
+                        <th scope="col">Registration Number</th>
+                        <th scope="col">Index Number</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Date of Intake </th>
+                        <th scope="col">Expected Graduation</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">A/L English</th>
+                        <th scope="col">Eligiblity</th>
+                        <th scope="col">Activities</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let student of students let i = index" (click)="selectStudent(i)" [ngClass]="rowIndex == i ? 'active' : '' ">
+                    <th scope="row">{{student.SeriesNo}}</th>
+                    <td>{{student.RegistrationNumber}}</td>
+                    <td>{{student.IndexNumber}}</td>
+                    <td>{{student.FirstName}}</td>
+                    <td>{{student.LastName}}</td>
+                    <td>{{student.DateofIntake| date | uppercase }}</td>
+                    <td>{{student.ExpectedGraduation}}</td>
+                    <td>{{student.Address | contentLimiter}}</td>
+                    <td>{{student.ALEnglish}}</td>
+                    <td >
+                        <p *ngIf="student.ALEnglish > 45">Eligible</p>
+                        <p *ngIf="student.ALEnglish <= 45">NOT Eligible</p>
+                    </td>
+                    <td>
+                        <button type="button" [disabled]="rowIndex !=i && !isRowSelected"><i class="fa fa-eye icon"></i></button>
+                        <button type="button" [disabled]="rowIndex !=i && !isRowSelected"><i class="fa fa-pencil-square-o icon"></i></button>
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+        </section>
+    </div>
+</div>
+<app-add-student></app-add-student>

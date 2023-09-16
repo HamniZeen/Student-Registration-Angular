@@ -1,0 +1,31 @@
+.add-student-section{
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.box-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid aliceblue;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.st-name{
+    font-size: 22px;
+    color: rgb(65,65,65);
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px red;
+}
+.error{
+    color: red;
+}
+
+.btn-outline-primary.disabled{
+    color: rgb(65,65,65);
+    background-color: aliceblue;
+}
