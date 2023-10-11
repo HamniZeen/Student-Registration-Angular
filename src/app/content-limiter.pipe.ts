@@ -7,7 +7,7 @@ export class ContentLimiterPipe implements PipeTransform {
 
   transform(value: string): string {
     if(value.length >13){
-      return value.substring(0,12)+ '...';
+      return value.substring(0,8)+ '...';
     }
     return value;
   }

@@ -8,7 +8,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class AddStudentComponent {
   constructor(private fb: FormBuilder) {
-    // Your constructor code here (if any)
+    
   }
   public studentFrom = this.fb.group({
     fName: ['', Validators.required],
@@ -18,7 +18,7 @@ export class AddStudentComponent {
     address: ['', Validators.required],
     dOI: ['', Validators.required],
     dOG: ['', Validators.required],
-    eR: ['0', Validators.required],
+    eR: ['', Validators.required],
   });
   
   onSubmit() {}
